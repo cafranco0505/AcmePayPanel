@@ -11,12 +11,20 @@ const platform_browser_1 = require("@angular/platform-browser");
 const core_1 = require("@angular/core");
 const app_routing_module_1 = require("./app-routing.module");
 const app_component_1 = require("./app.component");
+const main_component_1 = require("./components/main/main.component");
+const employees_component_1 = require("./components/employees/employees.component");
+const sales_component_1 = require("./components/sales/sales.component");
+const payments_component_1 = require("./components/payments/payments.component");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
         declarations: [
-            app_component_1.AppComponent
+            app_component_1.AppComponent,
+            main_component_1.MainComponent,
+            employees_component_1.EmployeesComponent,
+            sales_component_1.SalesComponent,
+            payments_component_1.PaymentsComponent
         ],
         imports: [
             platform_browser_1.BrowserModule,
