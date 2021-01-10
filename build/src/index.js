@@ -11,5 +11,5 @@ app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 // rutas
 app.use(indexRoutes_1.default);
-app.listen(3000);
-console.log('Server on port', 3000);
+app.listen(4000);
+console.log('Server on port', 4000);
