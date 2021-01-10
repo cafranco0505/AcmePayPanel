@@ -9,18 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmployeesComponent = void 0;
 const core_1 = require("@angular/core");
 let EmployeesComponent = class EmployeesComponent {
-    constructor(employeeService) {
-        this.employeeService = employeeService;
-        this.employees = [];
-    }
+    constructor() { }
     ngOnInit() {
-        this.getEmployees();
-    }
-    getEmployees() {
-        this.employeeService.getEmployeesData()
-            .subscribe(res => {
-            console.log(res);
-        }, err => console.error(err));
     }
 };
 EmployeesComponent = __decorate([

@@ -9,9 +9,6 @@ import { SalesComponent } from './components/sales/sales.component';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { MainPanelComponent } from './components/main-panel/main-panel.component';
 
-import { HttpClientModule } from '@angular/common/http';
-import { EmployeeService } from './services/employee.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +20,9 @@ import { EmployeeService } from './services/employee.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    AppRoutingModule
   ],
-  providers: [
-    EmployeeService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
