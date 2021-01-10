@@ -16,6 +16,8 @@ const employees_component_1 = require("./components/employees/employees.componen
 const sales_component_1 = require("./components/sales/sales.component");
 const payments_component_1 = require("./components/payments/payments.component");
 const main_panel_component_1 = require("./components/main-panel/main-panel.component");
+const http_1 = require("@angular/common/http");
+const employee_service_1 = require("./services/employee.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -30,9 +32,12 @@ AppModule = __decorate([
         ],
         imports: [
             platform_browser_1.BrowserModule,
-            app_routing_module_1.AppRoutingModule
+            app_routing_module_1.AppRoutingModule,
+            http_1.HttpClientModule
         ],
-        providers: [],
+        providers: [
+            employee_service_1.EmployeeService
+        ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

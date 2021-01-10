@@ -9,7 +9,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmployeeService = void 0;
 const core_1 = require("@angular/core");
 let EmployeeService = class EmployeeService {
-    constructor() { }
+    constructor(httpClient) {
+        this.httpClient = httpClient;
+        this.apiEndPoint = 'http://localhost:3000/api';
+    }
+    getEmployeesData() {
+        return this.httpClient.get(`${this.apiEndPoint}/employees`);
+    }
+    getEmployee(id) {
+        return this.httpClient.get(`${this.apiEndPoint}/employees/${id}`);
+    }
 };
 EmployeeService = __decorate([
     core_1.Injectable({
