@@ -7,17 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
-  apiEndPoint = 'http://localhost:3000/api';
+  apiEndPoint = 'http://161.35.131.209:3000/api';
 
   constructor( private httpClient: HttpClient) { }
 
-  getEmployeesData(){
+  getEmpData(){
     return this.httpClient.get(`${this.apiEndPoint}/employees`);
   }
 
-  getEmployee(id: string){
-    return this.httpClient.get(`${this.apiEndPoint}/employees/${id}`);
-  }
+  // getEmployee(id: string){
+  //   return this.httpClient.get(`${this.apiEndPoint}/employees/${id}`);
+  // }
 
   // deleteEmployee(id: string){
   //   return this.httpClient.delete(`${this.apiEndPoint}/employees/${id}`);

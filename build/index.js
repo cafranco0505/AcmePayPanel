@@ -7,9 +7,10 @@ const express_1 = __importDefault(require("express"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const app = express_1.default();
 // objetos json
+app.set('port', process.env.PORT || 3000);
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: false }));
 // rutas
 app.use(indexRoutes_1.default);
-app.listen(4000);
-console.log('Server on port', 4000);
+app.listen(app.get('port'));
+console.log('Server on port', app.get('port'));

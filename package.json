@@ -1,7 +1,6 @@
 {
-  "name": "Acme",
+  "name": "acme",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +16,14 @@
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^8.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cafranco0505/AcmePayPanel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cafranco0505/AcmePayPanel/issues"
+  },
+  "homepage": "https://github.com/cafranco0505/AcmePayPanel#readme",
+  "description": ""
 }
