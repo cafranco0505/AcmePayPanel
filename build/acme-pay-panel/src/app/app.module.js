@@ -15,6 +15,7 @@ const main_component_1 = require("./components/main/main.component");
 const employees_component_1 = require("./components/employees/employees.component");
 const sales_component_1 = require("./components/sales/sales.component");
 const payments_component_1 = require("./components/payments/payments.component");
+const main_panel_component_1 = require("./components/main-panel/main-panel.component");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -24,7 +25,8 @@ AppModule = __decorate([
             main_component_1.MainComponent,
             employees_component_1.EmployeesComponent,
             sales_component_1.SalesComponent,
-            payments_component_1.PaymentsComponent
+            payments_component_1.PaymentsComponent,
+            main_panel_component_1.MainPanelComponent
         ],
         imports: [
             platform_browser_1.BrowserModule,

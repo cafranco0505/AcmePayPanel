@@ -7,6 +7,7 @@ import { MainComponent } from './components/main/main.component';
 import { EmployeesComponent } from './components/employees/employees.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { PaymentsComponent } from './components/payments/payments.component';
+import { MainPanelComponent } from './components/main-panel/main-panel.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PaymentsComponent } from './components/payments/payments.component';
     MainComponent,
     EmployeesComponent,
     SalesComponent,
-    PaymentsComponent
+    PaymentsComponent,
+    MainPanelComponent
   ],
   imports: [
     BrowserModule,
