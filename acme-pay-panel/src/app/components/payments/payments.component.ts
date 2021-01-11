@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SalesService } from 'src/app/services/sales.service';
 import { EmployeeService } from '../../services/employee.service';
 
 @Component({
@@ -9,7 +10,9 @@ import { EmployeeService } from '../../services/employee.service';
 export class PaymentsComponent implements OnInit {
   employees: any = [];
   selected: number = 0;
-  constructor(private empService:EmployeeService) { }
+  //cantidad vendidad
+  sold: any;
+  constructor(private empService:EmployeeService, private salesService: SalesService) { }
 
   ngOnInit(): void {
     this.getEmployees();
@@ -20,6 +23,16 @@ export class PaymentsComponent implements OnInit {
       .subscribe(
         res => {
           this.employees = res;
+        },
+        err => console.error(err)
+      );
+  }
+
+  getEmpSales() {
+    this.salesService.getSalesData()
+      .subscribe(
+        res => {
+          this.sold = res;
         },
         err => console.error(err)
       );

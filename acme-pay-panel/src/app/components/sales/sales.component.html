@@ -1,25 +1,46 @@
-<div class="card">
-    <div class="card-body">
-        <form class="form-inline">
-            <div class="form-group">
-                <label>Experiencia</label>
-                <select class="form-select" aria-label="Default" name="empleado" >
-                    <option selected>Selecciona un empleado</option>
-                    <option *ngFor="let employee of employees" [value]="employee.id_asesor">#000{{employee.id_asesor}} - {{employee.nombre}} {{employee.apellido1}} {{employee.apellido2}}</option>
-                    <!-- <option value="2">Asesor Comercial Senior</option>
-                    <option value="3">Asesor Comercial Màster</option> -->
-                </select>
-            </div>
+<!-- card class - hostbinding -->
+<div class="card-body">
+    <form class="form-inline">
+        <div class="form-group">
+            <label>Empleado</label>
+            <select class="form-select" aria-label="Default" name="empleado"  [(ngModel)]="sale.asesor">
+                <option selected>Selecciona un empleado</option>
+                <option *ngFor="let employee of employees" [value]="employee.id_asesor">#000{{employee.id_asesor}} - {{employee.nombre}} {{employee.apellido1}} {{employee.apellido2}}</option>
+                <!-- <option value="2">Asesor Comercial Senior</option>
+                <option value="3">Asesor Comercial Màster</option> -->
+            </select>
+        </div>
 
 
-            <div class="form-group">
-                <label>Cantidad</label>
-                <input type="number" name="empleado" class="form-control">
-            </div>  
-    
-            <div class="btn btn-block btn-success">
-                Guardar
-            </div>  
-        </form>
-    </div>
+        <div class="form-group">
+            <label>Cantidad</label>
+            <input type="number" name="cantidad" [(ngModel)]="sale.valor" class="form-control">
+        </div>  
+
+        <div class="btn btn-block btn-success" (click)="saveSale()">
+            Guardar
+        </div>  
+    </form>
 </div>
+
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#Factura</th>
+            <th scope="col">#ID</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sale of sales">
+            <th scope="row">#0000{{sale.no_factura}}</th>
+            <td>{{sale.asesor}}</td>
+            <td>{{sale.valor}}</td>
+            <td>{{sale.fecha_factura}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

@@ -7,12 +7,13 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
-  apiEndPoint = 'http://64.225.28.145:3000/api';
+  apiEndPoint = 'http://localhost:3000/api/employees';
+  //apiEndPoint = 'http://64.225.28.145:3000/api';
 
   constructor( private httpClient: HttpClient) { }
 
   getEmpData(){
-    return this.httpClient.get(`${this.apiEndPoint}/employees`);
+    return this.httpClient.get(this.apiEndPoint);
   }
 
   // getEmployee(id: string){
@@ -20,11 +21,11 @@ export class EmployeeService {
   // }
 
   deleteEmployee(id: string){
-    return this.httpClient.delete(`${this.apiEndPoint}/employees/${id}`);
+    return this.httpClient.delete(`${this.apiEndPoint}/${id}`);
   }
 
   createEmployee(employee: EmployeeInterface) {
-    return this.httpClient.post(`${this.apiEndPoint}/employees`, employee);
+    return this.httpClient.post(this.apiEndPoint, employee);
   }
   
 }
