@@ -1,1 +1,29 @@
-<p>employees works!</p>
+
+  <div class="container">
+    <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Primer Apellido</th>
+            <th scope="col">Segundo Apellido</th>
+            <th scope="col">Dirección</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Email</th>
+            <th scope="col">Nivel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <th scope="row">{{employee.id_asesor}}</th>
+            <td>{{employee.nombre}}</td>
+            <td>{{employee.apellido1}}</td>
+            <td>{{employee.apellido2}}</td>
+            <td>{{employee.direccion}}</td>
+            <td>{{employee.telefono}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.nivel}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>

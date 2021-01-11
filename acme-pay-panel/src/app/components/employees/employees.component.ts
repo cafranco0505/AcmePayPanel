@@ -19,6 +19,7 @@ export class EmployeesComponent implements OnInit {
     this.employeeService.getEmpData()
       .subscribe(
         res => {
+          this.employees = res;
           console.log(res);
         },
         err => console.error(err)

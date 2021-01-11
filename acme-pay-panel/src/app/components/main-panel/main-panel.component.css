@@ -21,6 +21,10 @@
       color: #ffffff;
   }
 
+  h4 {
+    font-size: 36px;
+  }
+
   
   
   @media screen and (max-height: 450px) {

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
-  apiEndPoint = 'http://161.35.131.209:3000/api';
+  apiEndPoint = 'http://localhost:3000/api';
 
   constructor( private httpClient: HttpClient) { }
 
