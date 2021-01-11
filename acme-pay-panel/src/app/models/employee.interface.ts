@@ -3,7 +3,7 @@ export interface EmployeeInterface {
     apellido1?: string;
     apellido2?: string;
     direccion?: string;
-    telefono?: number;
+    telefono?: string;
     email?: string;
     nivel?: number;
 }

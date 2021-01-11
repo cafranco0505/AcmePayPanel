@@ -1,0 +1,54 @@
+<div class="col-md4">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" [(ngModel)]="employee.nombre" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label>Primer Apellido</label>
+                    <input type="text" name="apellido" [(ngModel)]="employee.apellido1" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label>Segundo Apellido</label>
+                    <input type="text" name="apellido2" [(ngModel)]="employee.apellido2" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" name="direccion" [(ngModel)]="employee.direccion" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="text" name="telefono" [(ngModel)]="employee.telefono" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" name="email" [(ngModel)]="employee.email" class="form-control">
+                </div>
+        
+                <div class="form-group">
+                    <label>Experiencia</label>
+                    <select class="form-select" aria-label="Default select example" name="nivel" [(ngModel)]="employee.nivel">
+                        <option selected>Nivel de experiencia.</option>
+                        <option value="1">Asesor Comercial Junior</option>
+                        <option value="2">Asesor Comercial Senior</option>
+                        <option value="3">Asesor Comercial Màster</option>
+                    </select>
+                </div>
+        
+                <div class="btn btn-block btn-success" (click)="saveEmp()">
+                    Guardar
+                </div>  
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+

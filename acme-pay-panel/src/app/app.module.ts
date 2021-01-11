@@ -11,6 +11,8 @@ import { MainPanelComponent } from './components/main-panel/main-panel.component
 
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './services/employee.service';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { EmployeeService } from './services/employee.service';
     EmployeesComponent,
     SalesComponent,
     PaymentsComponent,
-    MainPanelComponent
+    MainPanelComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     EmployeeService

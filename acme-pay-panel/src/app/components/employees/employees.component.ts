@@ -20,10 +20,20 @@ export class EmployeesComponent implements OnInit {
       .subscribe(
         res => {
           this.employees = res;
-          console.log(res);
         },
         err => console.error(err)
       );
+  }
+
+  deleteEmployee(id: string) {
+    this.employeeService.deleteEmployee(id)
+      .subscribe(
+        res => {
+          this.getEmployees();
+        },
+        err => console.error(err)
+      );
+    // console.log(id);
   }
 
 }

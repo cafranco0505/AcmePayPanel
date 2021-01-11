@@ -19,11 +19,12 @@ export class EmployeeService {
   //   return this.httpClient.get(`${this.apiEndPoint}/employees/${id}`);
   // }
 
-  // deleteEmployee(id: string){
-  //   return this.httpClient.delete(`${this.apiEndPoint}/employees/${id}`);
-  // }
+  deleteEmployee(id: string){
+    return this.httpClient.delete(`${this.apiEndPoint}/employees/${id}`);
+  }
 
-  // createEmployee(employee: EmployeeInterface) {
-  //   return this.httpClient.post(`${this.apiEndPoint}/employees`, employee);
-  // }
+  createEmployee(employee: EmployeeInterface) {
+    return this.httpClient.post(`${this.apiEndPoint}/employees`, employee);
+  }
+  
 }
