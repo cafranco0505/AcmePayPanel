@@ -1,28 +1,25 @@
-<div class="col-md4">
-    <div class="card">
-        <div class="card-body">
-            <form>
-                <div class="form-group">
-                    <label>Experiencia</label>
-                    <select class="form-select" aria-label="Default" name="empleado" >
-                        <option selected>Empleado.</option>
-                        <option value="1">Asesor Comercial Junior</option>
-                        <option value="2">Asesor Comercial Senior</option>
-                        <option value="3">Asesor Comercial Màster</option>
-                    </select>
-                </div>
+<div class="card">
+    <div class="card-body">
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Experiencia</label>
+                <select class="form-select" aria-label="Default" name="empleado" >
+                    <option selected>Selecciona un empleado</option>
+                    <option *ngFor="let employee of employees" [value]="employee.id_asesor">#000{{employee.id_asesor}} - {{employee.nombre}} {{employee.apellido1}} {{employee.apellido2}}</option>
+                    <!-- <option value="2">Asesor Comercial Senior</option>
+                    <option value="3">Asesor Comercial Màster</option> -->
+                </select>
+            </div>
 
 
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input type="text" name="empleado" class="form-control">
-                </div>  
-        
-                <div class="btn btn-block btn-success">
-                    Guardar
-                </div>  
-            </form>
-        </div>
-    </div>
+            <div class="form-group">
+                <label>Cantidad</label>
+                <input type="number" name="empleado" class="form-control">
+            </div>  
     
+            <div class="btn btn-block btn-success">
+                Guardar
+            </div>  
+        </form>
+    </div>
 </div>
