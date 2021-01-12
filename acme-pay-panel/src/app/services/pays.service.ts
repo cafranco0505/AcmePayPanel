@@ -7,8 +7,8 @@ import { PaymentInterface } from '../models/payment.interface';
 })
 export class PaysService {
 
-  apiEndPoint = 'http://localhost:3000/api/employees';
-  //apiEndPoint = 'http://64.225.28.145:3000/api';
+  // apiEndPoint = 'http://localhost:3000/api/pay';
+  apiEndPoint = 'http://174.138.56.34:3000/api/pay';
 
   constructor( private httpClient: HttpClient) { }
 
