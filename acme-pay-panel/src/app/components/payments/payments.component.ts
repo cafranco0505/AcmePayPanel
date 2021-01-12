@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeInterface } from 'src/app/models/employee.interface';
 import { SalesService } from 'src/app/services/sales.service';
 import { EmployeeService } from '../../services/employee.service';
 
@@ -9,8 +10,11 @@ import { EmployeeService } from '../../services/employee.service';
 })
 export class PaymentsComponent implements OnInit {
   employees: any = [];
-  selected: number = 0;
+  option: EmployeeInterface;
+  selected: Array<EmployeeInterface> = new Array<EmployeeInterface>();
   //cantidad vendidad
+  
+  id: any;
   sold: any;
   constructor(private empService:EmployeeService, private salesService: SalesService) { }
 
@@ -36,6 +40,21 @@ export class PaymentsComponent implements OnInit {
         },
         err => console.error(err)
       );
+  }
+// buscar empleado
+  searchEmp(){
+    this.empService.getEmployee(this.id)
+      .subscribe(
+        res => {
+          this.option = res;
+          console.log(this.option);
+        },
+        err => console.error(err)
+      );
+  }
+
+  Selected(){
+   
   }
 
 }

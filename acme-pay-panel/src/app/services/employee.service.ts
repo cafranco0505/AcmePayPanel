@@ -16,9 +16,9 @@ export class EmployeeService {
     return this.httpClient.get(this.apiEndPoint);
   }
 
-  // getEmployee(id: string){
-  //   return this.httpClient.get(`${this.apiEndPoint}/employees/${id}`);
-  // }
+  getEmployee(id: string){
+    return this.httpClient.get(`${this.apiEndPoint}/${id}`);
+  }
 
   deleteEmployee(id: string){
     return this.httpClient.delete(`${this.apiEndPoint}/${id}`);

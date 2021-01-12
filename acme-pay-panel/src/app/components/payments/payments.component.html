@@ -1,16 +1,17 @@
 <div class="row">
     <div class="col">
-        <select class="form-select" aria-label="Default" name="empleado" >
+        <select class="form-select" aria-label="Default" name="id" [(ngModel)]="id" >
             <option selected>Selecciona un empleado</option>
             <option *ngFor="let employee of employees" [value]="employee.id_asesor">#000{{employee.id_asesor}} - {{employee.nombre}} {{employee.apellido1}} {{employee.apellido2}}</option>
             <!-- <option value="2">Asesor Comercial Senior</option>
             <option value="3">Asesor Comercial Màster</option> -->
         </select>
+        <button class="btn btn-success" (click)="searchEmp()">Buscar</button>
 
         <!-- IF SELECT EMPLEADO -->
-        <div>
+        <div *ngIf="selected.length == 0">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"></li>
+                <li class="list-group-item"> NOMBRE: {{selected[0]}} ID: #000{{id}}</li>
                 <li class="list-group-item"></li>
               </ul>
         </div>
