@@ -6,4 +6,6 @@ export interface EmployeeInterface {
     telefono?: string;
     email?: string;
     nivel?: number;
+    salario?:number;
+    meta?:number;
 }

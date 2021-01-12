@@ -21,6 +21,6 @@ export class SalesService {
   }
 
   getEmpSales(id: string){
-    return this.httpClient.delete(`${this.apiEndPoint}/${id}`);
+    return this.httpClient.get(`${this.apiEndPoint}/${id}`);
   }
 }

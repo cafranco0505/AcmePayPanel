@@ -9,30 +9,34 @@
         <button class="btn btn-success" (click)="searchEmp()">Buscar</button>
 
         <!-- IF SELECT EMPLEADO -->
-        <div *ngIf="selected.length == 0">
+        <div *ngIf="cargado && soldArray.length != 0">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item"> NOMBRE: {{selected[0]}} ID: #000{{id}}</li>
-                <li class="list-group-item"></li>
+                <li class="list-group-item"> ID: #000{{id}}</li>
+                <li class="list-group-item"> NOMBRE: {{selected[0].nombre}} {{selected[0].apellido1}} {{selected[0].apellido2}} </li>
+                <li class="list-group-item"> Nivel: {{selected[0].nivel}} </li>
               </ul>
         </div>
 
     </div>
     <div class="col">
-        <div>
+        <div *ngIf="cargado && soldArray.length != 0">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Salud:</li>
-                <li class="list-group-item">Pensión:</li>
-                <li class="list-group-item">Riesgos:</li>
+                <li class="list-group-item">Salario neto: ${{salario | number}}</li>
+                <li class="list-group-item">Ventas: ${{ventas | number}}</li>
+                <li class="list-group-item">Meta: ${{meta | number}}</li>
+                <li class="list-group-item">Comisión: ${{comision | number}}</li>
+                <li class="list-group-item"> - Aporte salud: ${{salud | number}}</li>
+                <li class="list-group-item"> - Aporte riesgos: ${{riesgos | number}}</li>
+                <li class="list-group-item"> - Aporte pension: ${{pension | number}}</li>
+                <li class="list-group-item"></li>
               </ul>
         </div>
     </div>
 
-    <div>
+    <div *ngIf="cargado && soldArray.length != 0">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
+            <li class="list-group-item">-Aportes: ${{deducible | number}}</li>
+            <li class="list-group-item">Total: ${{total | number}}</li>
           </ul>
     </div>
   </div>
