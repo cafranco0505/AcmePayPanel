@@ -8,7 +8,7 @@ import { SalesInterface } from '../models/sales.interface';
 export class SalesService {
 
   // apiEndPoint = 'http://localhost:3000/api/sales';
-  apiEndPoint = 'http://174.138.56.34:3000/api/sales';
+  apiEndPoint = 'http://134.122.3.83:3000/api/sales';
 
   constructor( private httpClient: HttpClient) { }
 
